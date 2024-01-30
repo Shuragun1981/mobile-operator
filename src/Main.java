@@ -6,14 +6,14 @@ public class Main {
         // суммы пополнения и тп
         int clientAccount1 = 100;
         int refill = 1100;
-        if (refill <= 1000) {
-            int clientAccount = clientAccount1 + refill;
-            System.out.println("Сумма на счете: " + clientAccount);
-        }
         if (refill > 1000) {
             int bonus = refill / 100;
             int clientAccount = clientAccount1 + refill + bonus;
-            System.out.println("<Бонусные баллы: " + bonus);
+            System.out.println("Бонусные баллы: " + bonus);
+            System.out.println("Сумма на счете: " + clientAccount);
+        } else {
+            int clientAccount = clientAccount1 + refill;
+            System.out.println("Бонусные баллы: 0");
             System.out.println("Сумма на счете: " + clientAccount);
         }
         // Условным оператором проверяете, превысила ли
